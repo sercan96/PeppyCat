@@ -47,11 +47,13 @@ MonoBehaviour:
   spawnAnimals:
   - {fileID: 6843018543599616416, guid: 91aeda2cc523b5c459d67459b653da9d, type: 3}
   - {fileID: 8941812071411825797, guid: 44c31d8906beed5469027176d5f18625, type: 3}
-  - {fileID: 7513192408290445394, guid: 75fa72e27f4ecff4ba8896061d6fb06e, type: 3}
+  - {fileID: 164860473080007029, guid: 39e1f68203f4636458ecb3bee41927e1, type: 3}
   - {fileID: 1788881618427712596, guid: 157dd1a1077963545b829edb3982b972, type: 3}
   - {fileID: 1105145780567326050, guid: fe3a225120559c142b946139bc3d40d9, type: 3}
   - {fileID: 6294762698391852309, guid: caff924031a556b48b42f4db381addf3, type: 3}
   - {fileID: 1235272588495266775, guid: acf2eb2eb22852645849c695ebab5b67, type: 3}
+  - {fileID: 8629452956570087028, guid: 75fa72e27f4ecff4ba8896061d6fb06e, type: 3}
+  - {fileID: 8817214770238189847, guid: bb965bb537c32474193f080c3c44f130, type: 3}
   animalList: []
   currentAnimal: {fileID: 0}
   dieParticle: {fileID: 593651852364397553, guid: 3a39109bcb213d246a9a039d174da1ea, type: 3}

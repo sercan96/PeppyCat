@@ -34,9 +34,11 @@ public class RaycastTarget : MonoBehaviour
                     {
                         if (hit.collider.CompareTag("Animal"))
                         {
-                            Debug.Log("SoClose");
+                            //EventManager.InvokeOnTargetDie();
+                            // Debug.Log("SoClose");
                             hit.collider.GetComponentInParent<AnimalController>().CloseObject();
                             Spawner.Instance.GetNewAnimalWithDelay(hit.transform);
+                            ScoreManager.Instance.AddScore(100);
                         }
                         else if (hit.collider.CompareTag("Far"))
                         {

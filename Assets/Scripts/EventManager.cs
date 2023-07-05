@@ -26,11 +26,11 @@ namespace Managers
             OnTargetRun?.Invoke();
         }
         
-        public static event UnityAction<Transform> OnTargetDie;
+        public static event UnityAction OnTargetDie;
 
-        public static void InvokeOnTargetDie(Transform transform)
+        public static void InvokeOnTargetDie()
         {
-            OnTargetDie?.Invoke(transform);
+            OnTargetDie?.Invoke();
         }
         
         public static event UnityAction OnGameStart;

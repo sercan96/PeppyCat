@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 7653321113712928461}
   - component: {fileID: 722386313412244442}
   - component: {fileID: 2644029770911110205}
-  - component: {fileID: 7513192408290445394}
+  - component: {fileID: 8629452956570087028}
   m_Layer: 0
   m_Name: FantasyBee
   m_TagString: Animal
@@ -829,7 +829,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7860961, y: 0.54268813, z: 0.8451042}
   m_Center: {x: -0.011063973, y: 0.41305602, z: -0.011064053}
---- !u!114 &7513192408290445394
+--- !u!114 &8629452956570087028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

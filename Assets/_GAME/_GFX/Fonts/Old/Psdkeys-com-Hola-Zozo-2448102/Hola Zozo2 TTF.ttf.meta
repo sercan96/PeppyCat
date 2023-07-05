@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: df5d0676b26b17e45ab250993da153d3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Hola Zozo
+  fontNames:
+  - Hola Zozo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ccd2fab40ed75114aa0b23a8c9273cba, type: 3}
+  - {fileID: 12800000, guid: 75723e9640db72540bea6706aa9983b9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

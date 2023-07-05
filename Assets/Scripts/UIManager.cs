@@ -7,17 +7,18 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject UIScreen;
+    public GameObject menuUI;
+    public GameObject gameUI;
     public SceneFader sceneFader;
     public static UIManager Instance;
     
     private void OnEnable()
     {
-        EventManager.OnGameStart += UICanvasDeActivate;
+        EventManager.OnGameStart += MenuUICanvasDeactivate;
     }
     private void OnDisable()
     {
-        EventManager.OnGameStart -= UICanvasDeActivate;
+        EventManager.OnGameStart -= MenuUICanvasDeactivate;
     }
 
     private void Awake()
@@ -25,13 +26,28 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
-    private void UICanvasDeActivate()
+    private void MenuUICanvasDeactivate()
     {
-        UIScreen.SetActive(false);
+        SetUIActive(menuUI, false);
+        SetUIActive(gameUI, true);
     }
-    private void UICanvasActivate()
+
+    private void EnableUI()
     {
-        UIScreen.SetActive(true);
+        SetUIActive(menuUI, true);
+        SetUIActive(gameUI, false);
+    }
+
+    private void SetUIActive(GameObject uiObject, bool isActive)
+    {
+        if (uiObject != null)
+        {
+            uiObject.SetActive(isActive);
+        }
+        else
+        {
+            Debug.LogWarning("UI object is null.");
+        }
     }
     public void PlayButtonClick()
     {
