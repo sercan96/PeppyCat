@@ -800,6 +800,7 @@ MonoBehaviour:
   xMaxLimit: 4
   zMinLimit: -5
   zMaxLimit: 5
+  animatorCont: {fileID: 473717391713872606}
 --- !u!114 &473717391713872606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,6 +814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8829582624052771651}
+  objectTag: Muskat
 --- !u!114 &1788881618427712596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,6 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorCont: {fileID: 473717391713872606}
 --- !u!1 &7075999071711842021
 GameObject:
   m_ObjectHideFlags: 0

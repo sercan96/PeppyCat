@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Managers;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject menuUI;
+    public GameObject UIScreen;
     public GameObject gameUI;
+    public GameObject upgradePanelUI;
     public SceneFader sceneFader;
     public static UIManager Instance;
     
@@ -28,13 +30,13 @@ public class UIManager : MonoBehaviour
 
     private void MenuUICanvasDeactivate()
     {
-        SetUIActive(menuUI, false);
+        SetUIActive(UIScreen, false);
         SetUIActive(gameUI, true);
     }
 
     private void EnableUI()
     {
-        SetUIActive(menuUI, true);
+        SetUIActive(UIScreen, true);
         SetUIActive(gameUI, false);
     }
 
@@ -53,5 +55,17 @@ public class UIManager : MonoBehaviour
     {
         GameManager.Instance.OnPlay();
         sceneFader.FadeTo();
+    }
+
+    public void ClickStuff()
+    {
+        SetUIActive(upgradePanelUI, true);
+        SetUIActive(UIScreen, false);
+    }
+    
+    public void BackHomeButton()
+    {
+        SetUIActive(UIScreen, true);
+        SetUIActive(upgradePanelUI, false);
     }
 }

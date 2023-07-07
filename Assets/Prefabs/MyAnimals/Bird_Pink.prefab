@@ -235,8 +235,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6843018543599616423}
   - component: {fileID: 6843018543599616422}
-  - component: {fileID: 6843018543599616417}
   - component: {fileID: 6843018543599616416}
+  - component: {fileID: 6843018543599616417}
   m_Layer: 0
   m_Name: Bird_Pink
   m_TagString: Animal
@@ -284,6 +284,20 @@ MonoBehaviour:
   xMaxLimit: 5
   zMinLimit: -5
   zMaxLimit: 5
+  animatorCont: {fileID: 6843018543599616417}
+--- !u!114 &6843018543599616416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843018543599616419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorCont: {fileID: 6843018543599616417}
 --- !u!114 &6843018543599616417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,18 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6843018544256957574}
---- !u!114 &6843018543599616416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6843018543599616419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  objectTag: BirdPink
 --- !u!1 &6843018543620050369
 GameObject:
   m_ObjectHideFlags: 0

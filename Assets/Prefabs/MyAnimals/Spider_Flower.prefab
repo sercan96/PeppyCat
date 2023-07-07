@@ -791,6 +791,7 @@ MonoBehaviour:
   xMaxLimit: 5
   zMinLimit: -5
   zMaxLimit: 5
+  animatorCont: {fileID: 1733566105448463879}
 --- !u!114 &1733566105448463879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,6 +805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4278719502852030097}
+  objectTag: Spider
 --- !u!114 &6294762698391852309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,6 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorCont: {fileID: 1733566105448463879}
 --- !u!1 &4193357601723702185
 GameObject:
   m_ObjectHideFlags: 0

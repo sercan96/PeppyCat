@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using JSLizards.Iguana.Scripts;
 using Managers;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -26,6 +27,8 @@ public class Movement : MonoBehaviour
 
     private Vector3 currentDirection;
     private bool isChangingDirection;
+
+    [SerializeField] private AnimatorController animatorCont;
 
     private void OnEnable()
     {
@@ -84,7 +87,7 @@ public class Movement : MonoBehaviour
         else
         {
             isMoving = false;
-            EventManager.InvokeOnTargetStop();
+            EventManager.InvokeOnTargetStop(animatorCont.SetObjectTag());
         }
         
     }
@@ -99,7 +102,7 @@ public class Movement : MonoBehaviour
         HandleIdleIntervalEnd();
 
         isMoving = true;
-        EventManager.InvokeOnTargetMove();
+        EventManager.InvokeOnTargetMove(animatorCont.SetObjectTag());
         moveSpeed = defaultMoveSpeed;
        
     }
@@ -182,16 +185,19 @@ public class Movement : MonoBehaviour
     IEnumerator Escape(float waitTime)
     {
 
-        EventManager.InvokeOnTargetRun();
+        EventManager.InvokeOnTargetRun(animatorCont.SetObjectTag());
 
         yield return new WaitForSeconds(waitTime);
         
-        EventManager.InvokeOnTargetMove();
+        EventManager.InvokeOnTargetMove(animatorCont.SetObjectTag());
 
     }
 
-    private void OnTargetRun()
+    private void OnTargetRun(string tag)
     {
+        if (animatorCont.SetObjectTag() != tag)
+            return;
+        
         currentInterval = 2f;
         isMoving = true;
         moveSpeed = fastMoveSpeed;
@@ -210,9 +216,12 @@ public class Movement : MonoBehaviour
         currentDirection.y = 0f;
         currentDirection.Normalize();
     }
-    private void DefaultMoveSpeed()
+    private void DefaultMoveSpeed(string tag)
     {
-        moveSpeed = defaultMoveSpeed;
+        if (animatorCont.SetObjectTag() == tag)
+        {
+            moveSpeed = defaultMoveSpeed;
+        }
     }
     
 }

@@ -303,7 +303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2989883121030058198
 Transform:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2987064966936111944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.91, y: 0.9, z: 0}
+  m_LocalPosition: {x: 2.91, y: 1.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -344,6 +344,7 @@ MonoBehaviour:
   xMaxLimit: 5
   zMinLimit: -5
   zMaxLimit: 5
+  animatorCont: {fileID: 179977476822768964}
 --- !u!114 &179977476822768964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a2d73c2f105a84499780fbd2f3d8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 6564178498123993626}
+  objectTag: BirdBlue
 --- !u!114 &164860473080007029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorCont: {fileID: 179977476822768964}
 --- !u!1 &2987071787666049538
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2987109792391287624}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

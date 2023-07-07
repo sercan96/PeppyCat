@@ -803,6 +803,7 @@ MonoBehaviour:
   xMaxLimit: 8
   zMinLimit: -6
   zMaxLimit: 6
+  animatorCont: {fileID: 722386313412244442}
 --- !u!114 &722386313412244442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,6 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7738519657516150313}
+  objectTag: FantasyBee
 --- !u!65 &2644029770911110205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -841,6 +843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorCont: {fileID: 722386313412244442}
 --- !u!1 &7653289769138479857
 GameObject:
   m_ObjectHideFlags: 0

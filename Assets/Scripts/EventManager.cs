@@ -5,25 +5,25 @@ namespace Managers
 {
     public static class EventManager
     {
-        public static event UnityAction OnTargetStop;
+        public static event UnityAction<string> OnTargetStop;
 
-        public static void InvokeOnTargetStop()
+        public static void InvokeOnTargetStop(string tag)
         {
-            OnTargetStop?.Invoke();
+            OnTargetStop?.Invoke(tag);
         }
         
-        public static event UnityAction OnTargetMove;
+        public static event UnityAction<string> OnTargetMove;
 
-        public static void InvokeOnTargetMove()
+        public static void InvokeOnTargetMove(string tag)
         {
-            OnTargetMove?.Invoke();
+            OnTargetMove?.Invoke(tag);
         }
         
-        public static event UnityAction OnTargetRun;
+        public static event UnityAction<string> OnTargetRun;
 
-        public static void InvokeOnTargetRun()
+        public static void InvokeOnTargetRun(string tag)
         {
-            OnTargetRun?.Invoke();
+            OnTargetRun?.Invoke(tag);
         }
         
         public static event UnityAction OnTargetDie;
