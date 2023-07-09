@@ -16,7 +16,7 @@ public class RaycastTarget : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.gameState != GameManager.GameState.Play)
+        if (GameManager.Instance.gameState != GameManager.GameState.PlayMixed && GameManager.Instance.gameState != GameManager.GameState.PlayJustOneAnimal)
             return;
         
 #if UNITY_EDITOR
@@ -32,7 +32,6 @@ public class RaycastTarget : MonoBehaviour
                 {
                     AnimalController animalCont = hit.collider.GetComponentInParent<AnimalController>();
                     animalCont.CloseObject();
-                    //animalCont.GetComponentInParent<AnimatorController>()?.SetAsTargetObject(true);
                     Spawner.Instance.GetNewAnimalWithDelay(hit.transform);
                     Spawner.Instance.RemoveFromList(animalCont);
                     ScoreManager.Instance.AddScore(100);

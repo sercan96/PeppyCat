@@ -16,6 +16,7 @@ namespace JSLizards.Iguana.Scripts
         public void CloseObject()
         {
             EventManager.InvokeOnTargetMove(animatorCont != null ? animatorCont.SetObjectTag() : null);
+            Spawner.Instance.lastDeadAnimal = this;
             gameObject.SetActive(false);
         }
         

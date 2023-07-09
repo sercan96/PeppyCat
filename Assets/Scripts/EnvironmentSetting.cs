@@ -19,9 +19,9 @@ public class EnvironmentSetting : MonoBehaviour
         EventManager.OnGameStart -= ChangeEnvironmentWithDelay;
     }
 
-    public void ChangeEnvironmentWithDelay()
+    private void ChangeEnvironmentWithDelay()
     {
-        if (GameManager.Instance.gameState != GameManager.GameState.Play)
+        if (GameManager.Instance.gameState != GameManager.GameState.PlayMixed && GameManager.Instance.gameState != GameManager.GameState.PlayJustOneAnimal)
             return;
         
         InvokeRepeating(nameof(ChangeEnvironment),0,Random.Range(25,50));

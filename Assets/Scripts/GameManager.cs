@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     
     public enum GameState
     {
-        Play,
+        PlayMixed,
+        PlayJustOneAnimal,
         UI,
     }
 
@@ -23,9 +24,13 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    public void OnPlay()
+    public void OnMixedPlay()
     {
-        gameState = GameState.Play;
+        gameState = GameState.PlayMixed;
+    }
+    public void OnOneAnimalPlay()
+    {
+        gameState = GameState.PlayJustOneAnimal;
     }
     
     public void OnUI()

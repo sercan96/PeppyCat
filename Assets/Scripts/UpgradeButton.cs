@@ -11,6 +11,6 @@ public class UpgradeButton : MonoBehaviour
 
     private void OnEnable()
     {
-        upgradeCost = Convert.ToInt32(moneyText.text);
+        //upgradeCost = Convert.ToInt32(moneyText.text);
     }
 }

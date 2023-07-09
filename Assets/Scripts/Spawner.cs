@@ -5,6 +5,7 @@ using System.Net;
 using JSLizards.Iguana.Scripts;
 using Managers;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 
@@ -12,16 +13,22 @@ public class Spawner : MonoBehaviour
 {
     public List<AnimalController> spawnAnimals;
     public List<AnimalController> animalList;
-    public AnimalController currentAnimal;
     public ParticleSystem dieParticle;
 
     public bool isFirstSpawn = true;
     private int animalCounter = 0;
     public static Spawner Instance;
 
+    [SerializeField] private int mixedSpawnAnimNumber;
+    [SerializeField] private int singularSpawnAnimNumber;
     
-    private System.Random random = new System.Random();
+    private int defaultObjectNumber=1;
+    
     public List<AnimalController> choosenAnimals = new List<AnimalController>();
+
+    public AnimalController lastDeadAnimal;
+    
+    
     private void OnEnable()
     {
         EventManager.OnGameStart += ChooseOneAnimal;
@@ -38,22 +45,60 @@ public class Spawner : MonoBehaviour
     }
     private void Start()
     {
-        SpawnAllObjects();
+        //SpawnAllObjects();
     }
 
     private void SpawnAllObjects()
     {
+        if(isFirstSpawn)
+            return;
+        
         foreach (var animal in spawnAnimals)
         {
-            animalList.Add(Instantiate(animal, transform));
-            Instantiate(animal, transform);
+            AnimalController spawnedObject = Instantiate(animal, transform);
+            spawnedObject.name = "Object" + spawnedObject.GetInstanceID(); 
+            animalList.Add(spawnedObject);
             animal.gameObject.SetActive(false);
         }
     }
     
     private void ChooseOneAnimal()
     {
-        int maxSelectionCount = isFirstSpawn ? 3 : 1;
+        switch (GameManager.Instance.gameState)
+        {
+            case GameManager.GameState.PlayMixed:
+                SpawnAllObjects();
+                GetRandomChoose();
+                break;
+            case GameManager.GameState.PlayJustOneAnimal:
+                GetChosenAnimal(UIManager.Instance.animalCardId);
+                break;
+        }
+    }
+
+    private void GetChosenAnimal(int id)
+    {
+        if (isFirstSpawn)
+        {
+            ActivateAnimal(lastDeadAnimal);
+            return;
+        }
+            
+        for (int i = 0; i < singularSpawnAnimNumber; i++)
+        {
+            AnimalController spawnedObject = Instantiate(spawnAnimals[id], transform);
+            spawnedObject.name = "Object" + spawnedObject.GetInstanceID(); 
+            animalList.Add(spawnedObject);
+            ActivateAnimal(animalList[i]);
+        }
+
+        isFirstSpawn = true;
+    }
+    
+
+    private void GetRandomChoose()
+    {
+        int maxSelectionCount = !isFirstSpawn ? mixedSpawnAnimNumber : defaultObjectNumber;
 
         for (int i = 0; i < maxSelectionCount; i++)
         {
@@ -62,20 +107,18 @@ public class Spawner : MonoBehaviour
             ActivateAnimal(randomAnimal);
         }
 
-        isFirstSpawn = false;
+        isFirstSpawn = true;
     }
 
     private AnimalController GetRandomAvailableAnimal()
     {
         List<AnimalController> remainingAnimals = animalList.Except(choosenAnimals).ToList();
-        int randomIndex = random.Next(0, remainingAnimals.Count);
+        int randomIndex = Random.Range(0, remainingAnimals.Count);
         return remainingAnimals[randomIndex];
     }
 
     private void ActivateAnimal(AnimalController animal)
     {
-        //int random = Random.Range(0, animalList.Count);
-        // animal = animalList[Random.Range(0, animalList.Count)];
         animal.transform.position = RandomPositionGenerator.GetRandomPosition();
         animal.gameObject.SetActive(true);
     }
@@ -93,7 +136,7 @@ public class Spawner : MonoBehaviour
     public void GetNewAnimalWithDelay(Transform target)
     {
         DieParticle(target);
-        Invoke(nameof(GetAnotherAnimal),3f);
+        Invoke(nameof(GetAnotherAnimal),1f);
     }
     private void DieParticle(Transform target)
     {

@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     public GameObject upgradePanelUI;
     public SceneFader sceneFader;
     public static UIManager Instance;
+
+    public int animalCardId;
     
     private void OnEnable()
     {
@@ -32,6 +34,7 @@ public class UIManager : MonoBehaviour
     {
         SetUIActive(UIScreen, false);
         SetUIActive(gameUI, true);
+        SetUIActive(upgradePanelUI, false);
     }
 
     private void EnableUI()
@@ -51,9 +54,16 @@ public class UIManager : MonoBehaviour
             Debug.LogWarning("UI object is null.");
         }
     }
-    public void PlayButtonClick()
+    public void PlayMixedButtonClick()
     {
-        GameManager.Instance.OnPlay();
+        GameManager.Instance.OnMixedPlay();
+        sceneFader.FadeTo();
+    }
+    
+    public void PlayOneAnimalButtonClick(int id)
+    {
+        animalCardId = id;
+        GameManager.Instance.OnOneAnimalPlay();
         sceneFader.FadeTo();
     }
 

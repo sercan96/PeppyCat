@@ -218,10 +218,7 @@ public class Movement : MonoBehaviour
     }
     private void DefaultMoveSpeed(string tag)
     {
-        if (animatorCont.SetObjectTag() == tag)
-        {
-            moveSpeed = defaultMoveSpeed;
-        }
+        moveSpeed = defaultMoveSpeed;
     }
     
 }
