@@ -19,9 +19,8 @@ public class Spawner : MonoBehaviour
     private int animalCounter = 0;
     public static Spawner Instance;
 
-    [SerializeField] private int mixedSpawnAnimNumber;
-    [SerializeField] private int singularSpawnAnimNumber;
-    
+    [SerializeField] private int spawnAnimalCount;
+
     private int defaultObjectNumber=1;
     
     public List<AnimalController> choosenAnimals = new List<AnimalController>();
@@ -42,10 +41,6 @@ public class Spawner : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-    }
-    private void Start()
-    {
-        //SpawnAllObjects();
     }
 
     private void SpawnAllObjects()
@@ -84,7 +79,7 @@ public class Spawner : MonoBehaviour
             return;
         }
             
-        for (int i = 0; i < singularSpawnAnimNumber; i++)
+        for (int i = 0; i < spawnAnimalCount; i++)
         {
             AnimalController spawnedObject = Instantiate(spawnAnimals[id], transform);
             spawnedObject.name = "Object" + spawnedObject.GetInstanceID(); 
@@ -98,7 +93,7 @@ public class Spawner : MonoBehaviour
 
     private void GetRandomChoose()
     {
-        int maxSelectionCount = !isFirstSpawn ? mixedSpawnAnimNumber : defaultObjectNumber;
+        int maxSelectionCount = !isFirstSpawn ? spawnAnimalCount : defaultObjectNumber;
 
         for (int i = 0; i < maxSelectionCount; i++)
         {
@@ -146,5 +141,21 @@ public class Spawner : MonoBehaviour
     private void GetAnotherAnimal()
     {
         ChooseOneAnimal();
+    }
+
+    public int IncreaseValue()
+    {
+        if (spawnAnimalCount >= 4)
+            return spawnAnimalCount;
+        
+        return ++spawnAnimalCount;
+    }
+    
+    public int DecreaseValue()
+    {
+        if (spawnAnimalCount <= 1)
+            return spawnAnimalCount;
+        
+        return --spawnAnimalCount;
     }
 }

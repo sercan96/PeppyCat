@@ -31,7 +31,6 @@ public class ScoreManager : MonoBehaviour
         score = 0;
         UpdateScoreText();
         GetPoint();
-        Debug.Log("GetPoint" + GetPoint());
     }
 
     private static int GetPoint()

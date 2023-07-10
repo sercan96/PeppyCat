@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &260618736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9004516485797543154, guid: cb6f29df999302c4bb4c6f3d6cf13fe9, type: 3}
+  m_PrefabInstance: {fileID: 6226316407335143498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &370367200
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreText: {fileID: 958768722}
+  scoreText: {fileID: 260618736}
 --- !u!4 &957943492
 Transform:
   m_ObjectHideFlags: 0
@@ -347,17 +358,6 @@ Transform:
   m_Father: {fileID: 983119625}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &958768722 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6822408804754872483, guid: cb6f29df999302c4bb4c6f3d6cf13fe9, type: 3}
-  m_PrefabInstance: {fileID: 6226316407335143498}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &983119624
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +747,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a43c0f7d26d9d7a4487fa0e9c9175f17, type: 2}
+  - {fileID: 2100000, guid: b0be9b80f8c2eec4e94ead847004b60f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -903,10 +903,6 @@ PrefabInstance:
     - target: {fileID: 6226316406906475723, guid: cb6f29df999302c4bb4c6f3d6cf13fe9, type: 3}
       propertyPath: m_Name
       value: BaseUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6226316406906475723, guid: cb6f29df999302c4bb4c6f3d6cf13fe9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb6f29df999302c4bb4c6f3d6cf13fe9, type: 3}

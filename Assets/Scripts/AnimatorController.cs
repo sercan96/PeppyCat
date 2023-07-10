@@ -45,7 +45,6 @@ public class AnimatorController : MonoBehaviour
    private void AssignID()
    {
       animalId++;
-      Debug.Log("animalId"+ animalId);
       SetObjectTag();
    }
 

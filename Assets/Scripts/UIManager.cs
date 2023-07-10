@@ -1,16 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Managers;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
+
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject UIScreen;
-    public GameObject gameUI;
-    public GameObject upgradePanelUI;
+    public GameObject menuUI;
+    public GameObject playScreenUI;
     public SceneFader sceneFader;
     public static UIManager Instance;
 
@@ -32,15 +27,13 @@ public class UIManager : MonoBehaviour
 
     private void MenuUICanvasDeactivate()
     {
-        SetUIActive(UIScreen, false);
-        SetUIActive(gameUI, true);
-        SetUIActive(upgradePanelUI, false);
+        SetUIActive(menuUI, false);
+        SetUIActive(playScreenUI, true);
     }
 
     private void EnableUI()
     {
-        SetUIActive(UIScreen, true);
-        SetUIActive(gameUI, false);
+        SetUIActive(menuUI, true);
     }
 
     private void SetUIActive(GameObject uiObject, bool isActive)
@@ -56,26 +49,26 @@ public class UIManager : MonoBehaviour
     }
     public void PlayMixedButtonClick()
     {
-        GameManager.Instance.OnMixedPlay();
         sceneFader.FadeTo();
     }
     
     public void PlayOneAnimalButtonClick(int id)
     {
         animalCardId = id;
-        GameManager.Instance.OnOneAnimalPlay();
         sceneFader.FadeTo();
     }
 
     public void ClickStuff()
     {
-        SetUIActive(upgradePanelUI, true);
-        SetUIActive(UIScreen, false);
+        SetUIActive(playScreenUI, true);
+        SetUIActive(menuUI, false);
     }
     
     public void BackHomeButton()
     {
-        SetUIActive(UIScreen, true);
-        SetUIActive(upgradePanelUI, false);
+        SetUIActive(menuUI, true);
+        SetUIActive(playScreenUI, false);
     }
+
+
 }
