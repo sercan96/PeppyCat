@@ -805,7 +805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4278719502852030097}
-  objectTag: Spider
+  animalId: 0
 --- !u!114 &6294762698391852309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,6 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 1733566105448463879}
+  movement: {fileID: 5023368402955011523}
 --- !u!1 &4193357601723702185
 GameObject:
   m_ObjectHideFlags: 0

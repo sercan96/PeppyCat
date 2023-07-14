@@ -1596,6 +1596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 4587172664236218571}
+  movement: {fileID: 4587172664236218569}
 --- !u!114 &4587172664236218571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1609,7 +1610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4587172664245610160}
-  objectTag: LoveDuck
+  animalId: 0
 --- !u!65 &4587172664236218568
 BoxCollider:
   m_ObjectHideFlags: 0

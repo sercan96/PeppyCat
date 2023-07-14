@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 6843018543599616417}
+  movement: {fileID: 6843018543599616422}
 --- !u!114 &6843018543599616417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6843018544256957574}
-  objectTag: BirdPink
+  animalId: 0
 --- !u!1 &6843018543620050369
 GameObject:
   m_ObjectHideFlags: 0

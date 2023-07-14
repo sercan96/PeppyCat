@@ -19,13 +19,18 @@ public class Spawner : MonoBehaviour
     private int animalCounter = 0;
     public static Spawner Instance;
 
-    [SerializeField] private int spawnAnimalCount;
+    // [SerializeField] private int spawnAnimalCount;
 
     private int defaultObjectNumber=1;
     
     public List<AnimalController> choosenAnimals = new List<AnimalController>();
 
     public AnimalController lastDeadAnimal;
+    private AnimalController selectedAnimal;
+    
+    
+    public int spawnAnimalCount;
+    public float speedValue; 
     
     
     private void OnEnable()
@@ -51,6 +56,7 @@ public class Spawner : MonoBehaviour
         foreach (var animal in spawnAnimals)
         {
             AnimalController spawnedObject = Instantiate(animal, transform);
+            spawnedObject.movement.ChangeSpeedValue(speedValue);
             spawnedObject.name = "Object" + spawnedObject.GetInstanceID(); 
             animalList.Add(spawnedObject);
             animal.gameObject.SetActive(false);
@@ -66,12 +72,17 @@ public class Spawner : MonoBehaviour
                 GetRandomChoose();
                 break;
             case GameManager.GameState.PlayJustOneAnimal:
-                GetChosenAnimal(UIManager.Instance.animalCardId);
+                GetChosenAnimal(selectedAnimal);
                 break;
         }
     }
+    
+    public void CatchClickAnimal(AnimalController animalController)
+    { 
+        selectedAnimal = animalController;
+    }
 
-    private void GetChosenAnimal(int id)
+    private void GetChosenAnimal(AnimalController currenAnimal)
     {
         if (isFirstSpawn)
         {
@@ -81,7 +92,8 @@ public class Spawner : MonoBehaviour
             
         for (int i = 0; i < spawnAnimalCount; i++)
         {
-            AnimalController spawnedObject = Instantiate(spawnAnimals[id], transform);
+            AnimalController spawnedObject = Instantiate(currenAnimal, transform);
+            spawnedObject.movement.ChangeSpeedValue(speedValue);
             spawnedObject.name = "Object" + spawnedObject.GetInstanceID(); 
             animalList.Add(spawnedObject);
             ActivateAnimal(animalList[i]);
@@ -143,19 +155,14 @@ public class Spawner : MonoBehaviour
         ChooseOneAnimal();
     }
 
-    public int IncreaseValue()
-    {
-        if (spawnAnimalCount >= 4)
-            return spawnAnimalCount;
-        
-        return ++spawnAnimalCount;
-    }
-    
-    public int DecreaseValue()
-    {
-        if (spawnAnimalCount <= 1)
-            return spawnAnimalCount;
-        
-        return --spawnAnimalCount;
-    }
+    // public void UpdateSpawnValue(float value)
+    // {
+    //     spawnAnimalCount = (int) value;
+    // }
+    //
+    // public void UpdateSpeedValue(float value)
+    // {
+    //     spawnAnimalCount = (int) value;
+    // }
+
 }

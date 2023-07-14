@@ -24,11 +24,23 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    public void OnMixedPlay()
+    private void OnEnable()
+    {
+        EventManager.OnGameModeMixed += OnMixedPlay;
+        EventManager.OnGameModeSingular += OnOneAnimalPlay;
+    }
+    
+    private void OnDisable()
+    {
+        EventManager.OnGameModeMixed -= OnMixedPlay;
+        EventManager.OnGameModeSingular -= OnOneAnimalPlay;
+    }
+
+    private void OnMixedPlay(bool state = true)
     {
         gameState = GameState.PlayMixed;
     }
-    public void OnOneAnimalPlay()
+    private void OnOneAnimalPlay(bool state = false)
     {
         gameState = GameState.PlayJustOneAnimal;
     }

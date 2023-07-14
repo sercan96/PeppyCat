@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9574e19738dd3e144b226dda2da10190, type: 3}
+  m_Name: SpiderCardData 2
+  m_EditorClassIdentifier: 
+  animalPrefab: {fileID: 6294762698391852309, guid: caff924031a556b48b42f4db381addf3, type: 3}
+  groundMat: {fileID: 2100000, guid: 63a7a44a03b04434b941e895fcb5ac68, type: 2}

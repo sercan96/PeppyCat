@@ -398,7 +398,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9fd69cef0cd8aa1408f59985fe3c4993, type: 2}
+  - {fileID: 2100000, guid: 9c89bba87531fce4c9d9868a4625ea08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1506,7 +1506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3810354759005836108}
-  objectTag: Iguana
+  animalId: 0
 --- !u!114 &3810354759001607831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,6 +1557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 3810354759001607830}
+  movement: {fileID: 3810354759001607831}
 --- !u!1 &3810354758998342770
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,7 +3499,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.982048, b: 0.14528298, a: 1}
   m_Intensity: 4
   m_Range: 4
   m_SpotAngle: 30

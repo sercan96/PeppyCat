@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject menuUI;
-    public GameObject playScreenUI;
+    public PlayMenuUI playMenuUI;
+    public GameObject gameUI;
     public SceneFader sceneFader;
     public static UIManager Instance;
 
-    public int animalCardId;
+   
+
     
     private void OnEnable()
     {
@@ -25,15 +26,17 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
+
+
     private void MenuUICanvasDeactivate()
     {
-        SetUIActive(menuUI, false);
-        SetUIActive(playScreenUI, true);
+        SetUIActive(playMenuUI.gameObject, false);
+        SetUIActive(gameUI, true);
     }
 
     private void EnableUI()
     {
-        SetUIActive(menuUI, true);
+        SetUIActive(playMenuUI.gameObject, true);
     }
 
     private void SetUIActive(GameObject uiObject, bool isActive)
@@ -47,27 +50,17 @@ public class UIManager : MonoBehaviour
             Debug.LogWarning("UI object is null.");
         }
     }
-    public void PlayMixedButtonClick()
-    {
-        sceneFader.FadeTo();
-    }
-    
-    public void PlayOneAnimalButtonClick(int id)
-    {
-        animalCardId = id;
-        sceneFader.FadeTo();
-    }
 
     public void ClickStuff()
     {
-        SetUIActive(playScreenUI, true);
-        SetUIActive(menuUI, false);
+        SetUIActive(gameUI, true);
+        SetUIActive(playMenuUI.gameObject, false);
     }
     
     public void BackHomeButton()
     {
-        SetUIActive(menuUI, true);
-        SetUIActive(playScreenUI, false);
+        SetUIActive(playMenuUI.gameObject, true);
+        SetUIActive(gameUI, false);
     }
 
 

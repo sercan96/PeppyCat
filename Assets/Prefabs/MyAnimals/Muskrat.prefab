@@ -814,7 +814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8829582624052771651}
-  objectTag: Muskat
+  animalId: 0
 --- !u!114 &1788881618427712596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 473717391713872606}
+  movement: {fileID: 412782197606858168}
 --- !u!1 &7075999071711842021
 GameObject:
   m_ObjectHideFlags: 0

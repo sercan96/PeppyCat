@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 510750470525422704}
-  objectTag: Rabbit
+  animalId: 0
 --- !u!114 &1235272588495266775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,6 +1142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 7723135731342763488}
+  movement: {fileID: 4376740560390490178}
 --- !u!1 &452152923704484512
 GameObject:
   m_ObjectHideFlags: 0

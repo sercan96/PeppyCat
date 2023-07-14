@@ -8,6 +8,7 @@ namespace JSLizards.Iguana.Scripts
     public class AnimalController : MonoBehaviour
     {
         [SerializeField] private AnimatorController animatorCont;
+        public Movement movement;
         private void OnEnable()
         {
             EventManager.OnTargetDie += CloseObject;

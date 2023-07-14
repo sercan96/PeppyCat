@@ -37,8 +37,6 @@ public class AnimatorController : MonoBehaviour
    
    public String SetObjectTag()
    {
-      // Debug.Log("objectTag + animalId"+ objectTag + animalId);
-      // return objectTag + animalId;
       return gameObject.name;
    }
 
@@ -50,19 +48,19 @@ public class AnimatorController : MonoBehaviour
 
    private void IdleAnim(string tag)
    {
-      if (tag != SetObjectTag()) return;
+      if (tag == null || tag != SetObjectTag()) return;
       animator.SetTrigger(idleAnım);
    }
 
    private void WalkAnim(string tag)
    {
-      if (tag != SetObjectTag()) return;
+      if (tag == null || tag != SetObjectTag()) return;
       animator.SetTrigger(walkAnim);
    }
 
    private void RunAnim(string tag)
    {
-      if (tag != SetObjectTag()) return;
+      if (tag == null || tag != SetObjectTag()) return;
       animator.SetTrigger(runAnim);
 
    }

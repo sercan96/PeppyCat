@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7738519657516150313}
-  objectTag: FantasyBee
+  animalId: 0
 --- !u!65 &2644029770911110205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -844,6 +844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 722386313412244442}
+  movement: {fileID: 7653321113712928461}
 --- !u!1 &7653289769138479857
 GameObject:
   m_ObjectHideFlags: 0

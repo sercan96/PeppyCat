@@ -2261,6 +2261,7 @@ MonoBehaviour:
   xMaxLimit: 2.5
   zMinLimit: -2.5
   zMaxLimit: 2.5
+  animatorCont: {fileID: 0}
 --- !u!65 &8690314982245412295
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2286,3 +2287,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorCont: {fileID: 0}
+  movement: {fileID: 5531491282672077333}

@@ -87,7 +87,8 @@ public class Movement : MonoBehaviour
         else
         {
             isMoving = false;
-            EventManager.InvokeOnTargetStop(animatorCont.SetObjectTag());
+            //EventManager.InvokeOnTargetStop(animatorCont.SetObjectTag());
+            EventManager.InvokeOnTargetStop(animatorCont != null ? animatorCont.SetObjectTag() : null);
         }
         
     }
@@ -102,7 +103,8 @@ public class Movement : MonoBehaviour
         HandleIdleIntervalEnd();
 
         isMoving = true;
-        EventManager.InvokeOnTargetMove(animatorCont.SetObjectTag());
+        // EventManager.InvokeOnTargetMove(animatorCont.SetObjectTag());
+        EventManager.InvokeOnTargetMove(animatorCont != null ? animatorCont.SetObjectTag() : null);
         moveSpeed = defaultMoveSpeed;
        
     }
@@ -184,13 +186,11 @@ public class Movement : MonoBehaviour
     
     IEnumerator Escape(float waitTime)
     {
-
         EventManager.InvokeOnTargetRun(animatorCont.SetObjectTag());
 
         yield return new WaitForSeconds(waitTime);
         
         EventManager.InvokeOnTargetMove(animatorCont.SetObjectTag());
-
     }
 
     private void OnTargetRun(string tag)
@@ -219,6 +219,13 @@ public class Movement : MonoBehaviour
     private void DefaultMoveSpeed(string tag)
     {
         moveSpeed = defaultMoveSpeed;
+    }
+
+    public void ChangeSpeedValue(float speedValue)
+    {
+        moveSpeed = speedValue;
+        defaultMoveSpeed = speedValue;
+        fastMoveSpeed = speedValue * 1.5f;
     }
     
 }

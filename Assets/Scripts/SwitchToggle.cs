@@ -8,7 +8,7 @@ namespace Managers
         [SerializeField] RectTransform uiHandleRectTransform ;
         [SerializeField] Color backgroundActiveColor ;
         [SerializeField] Color handleActiveColor ;
-        [SerializeField] PlayScreenUI playScreenUI ;
+        [SerializeField] PlayMenuUI playMenuUI ;
 
         Image backgroundImage, handleImage ;
 
@@ -55,20 +55,23 @@ namespace Managers
 
         private void GameMode(bool state) // Belki iki mod için event yapılabilir.
         {
-            foreach (var animalItem in playScreenUI.animalItems)
+            foreach (var animalItem in playMenuUI.animalCardItems)
             {
                 animalItem.button.interactable = state;
             }
 
             if (state)
             {
-                GameManager.Instance.OnOneAnimalPlay(); 
+                EventManager.InvokeOnGameModeSingular();
+                // GameManager.Instance.OnOneAnimalPlay(); 
+                
             }
             else
             {
-                GameManager.Instance.OnMixedPlay();
+                EventManager.InvokeOnGameModeMixed();
+                //GameManager.Instance.OnMixedPlay();
             }
-            playScreenUI.randomStamp.SetActive(!state);
+            playMenuUI.randomStamp.SetActive(!state);
         }
     }
 }

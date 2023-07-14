@@ -726,7 +726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1043352946496549175, guid: bb965bb537c32474193f080c3c44f130, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6289548162338822582, guid: bb965bb537c32474193f080c3c44f130, type: 3}
       propertyPath: m_RootOrder
@@ -734,27 +734,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6289548162338822582, guid: bb965bb537c32474193f080c3c44f130, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1937195
+      value: 1.1182542
       objectReference: {fileID: 0}
     - target: {fileID: 6289548162338822582, guid: bb965bb537c32474193f080c3c44f130, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1937195
+      value: 1.1182542
       objectReference: {fileID: 0}
     - target: {fileID: 6289548162338822582, guid: bb965bb537c32474193f080c3c44f130, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.1937195
+      value: 1.1182542
       objectReference: {fileID: 0}
     - target: {fileID: 6289548162338822582, guid: bb965bb537c32474193f080c3c44f130, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.087791
+      value: 0.042
       objectReference: {fileID: 0}
     - target: {fileID: 6289548162338822582, guid: bb965bb537c32474193f080c3c44f130, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.46665
+      value: 0.553
       objectReference: {fileID: 0}
     - target: {fileID: 6289548162338822582, guid: bb965bb537c32474193f080c3c44f130, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5101999
+      value: 1.512
       objectReference: {fileID: 0}
     - target: {fileID: 6289548162338822582, guid: bb965bb537c32474193f080c3c44f130, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1997,6 +1997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorCont: {fileID: 0}
 --- !u!114 &568283682082823316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2010,6 +2011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  animalId: 0
 --- !u!136 &1013399409747430694
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2047,6 +2049,7 @@ MonoBehaviour:
   xMaxLimit: 5
   zMinLimit: -5
   zMaxLimit: 5
+  animatorCont: {fileID: 0}
 --- !u!108 &1408773444873163806
 Light:
   m_ObjectHideFlags: 0
@@ -3281,6 +3284,7 @@ MonoBehaviour:
   xMaxLimit: 7
   zMinLimit: -6
   zMaxLimit: 6
+  animatorCont: {fileID: 0}
 --- !u!95 &2606535578022949417
 Animator:
   serializedVersion: 5
@@ -5780,6 +5784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorCont: {fileID: 0}
 --- !u!1 &4490779523918307670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5810,6 +5815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2606535578022949417}
+  animalId: 0
 --- !u!4 &5912249476983863303
 Transform:
   m_ObjectHideFlags: 0
@@ -5837,6 +5843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1659dbdeb41e48c391584b2c7c7af226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorCont: {fileID: 0}
 --- !u!136 &6305639108714768932
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5989,7 +5996,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9fd69cef0cd8aa1408f59985fe3c4993, type: 2}
+  - {fileID: 2100000, guid: 9c89bba87531fce4c9d9868a4625ea08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6155,6 +6162,7 @@ MonoBehaviour:
   xMaxLimit: 7
   zMinLimit: -6
   zMaxLimit: 6
+  animatorCont: {fileID: 0}
 --- !u!114 &7853781125364302917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6168,6 +6176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7853781125368404383}
+  animalId: 0
 --- !u!65 &7853781125364302922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8577,8 +8586,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7853781125378079979}
-  m_LocalRotation: {x: -0.00083299604, y: -0.74555224, z: -0.0009318712, w: -0.6664461}
-  m_LocalPosition: {x: 0.02, y: 0.54, z: -0.017}
+  m_LocalRotation: {x: 0.70036274, y: -0.020662379, z: -0.020392274, w: -0.7131966}
+  m_LocalPosition: {x: -0.001, y: 0.6, z: -0.428}
   m_LocalScale: {x: 1.8959795, y: 1.8959795, z: 1.8959795}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8587,7 +8596,7 @@ Transform:
   - {fileID: 5912249476983863303}
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 359.984, y: 96.413, z: 0.142}
+  m_LocalEulerAnglesHint: {x: 271.04, y: 2.869, z: 0.458}
 --- !u!4 &7853781125378287379
 Transform:
   m_ObjectHideFlags: 0
@@ -9689,6 +9698,7 @@ MonoBehaviour:
   xMaxLimit: 2.5
   zMinLimit: -2.5
   zMaxLimit: 2.5
+  animatorCont: {fileID: 0}
 --- !u!1 &8504488877795109161
 GameObject:
   m_ObjectHideFlags: 0
@@ -10140,6 +10150,7 @@ MonoBehaviour:
   xMaxLimit: 5
   zMinLimit: -5
   zMaxLimit: 5
+  animatorCont: {fileID: 0}
 --- !u!23 &8820203283504865448
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12261,6 +12272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6690329859020271893}
+  animalId: 0
 --- !u!1 &8963172403849040764
 GameObject:
   m_ObjectHideFlags: 0

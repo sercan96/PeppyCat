@@ -5212,6 +5212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 7216643201830275912}
+  movement: {fileID: 7216643201830275913}
 --- !u!114 &7216643201830275912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5225,7 +5226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7216643201820762508}
-  objectTag: Flower
+  animalId: 0
 --- !u!1 &7216643201829977964
 GameObject:
   m_ObjectHideFlags: 0

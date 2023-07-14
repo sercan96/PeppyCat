@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7863078401466071995}
-  objectTag: Gecko
+  animalId: 0
 --- !u!65 &4129186980962260896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 3689713401730236271}
+  movement: {fileID: 7389505530836200101}
 --- !u!1 &1326047477144486083
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +318,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f65b2b5a402c648438fcffd294eb2dbe, type: 2}
+  - {fileID: 2100000, guid: 71824330e53acb448a9f9c1f4cfc7aee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -562,7 +563,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 1, b: 0.10232139, a: 1}
+  m_Color: {r: 0.9164315, g: 1, b: 0.013207495, a: 1}
   m_Intensity: 4
   m_Range: 4
   m_SpotAngle: 30

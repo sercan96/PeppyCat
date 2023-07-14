@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9574e19738dd3e144b226dda2da10190, type: 3}
+  m_Name: ButterflyCardData 2
+  m_EditorClassIdentifier: 
+  animalPrefab: {fileID: 8941812071411825797, guid: 44c31d8906beed5469027176d5f18625, type: 3}
+  groundMat: {fileID: 2100000, guid: 157c47e0c183e304d98ecf181ace8326, type: 2}

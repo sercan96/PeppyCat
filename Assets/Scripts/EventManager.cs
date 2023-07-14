@@ -39,5 +39,17 @@ namespace Managers
         {
             OnGameStart?.Invoke();
         }
+        
+        public static event UnityAction<bool> OnGameModeMixed;
+        public static void InvokeOnGameModeMixed()
+        {
+            OnGameModeMixed?.Invoke(true);
+        }
+        
+        public static event UnityAction<bool> OnGameModeSingular;
+        public static void InvokeOnGameModeSingular()
+        {
+            OnGameModeSingular?.Invoke(false);
+        }
     }
 }

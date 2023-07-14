@@ -24,9 +24,8 @@ public class LongPressButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         if (isPressed && !hasExecuted && Time.time - pressTime >= longPressDuration)
         {
-            Debug.Log("Uzun basma gerçekleşti!");
-            UIManager.Instance.BackHomeButton();
             hasExecuted = true;
+            LevelLoader.Instance.LoadScene("Game");
         }
         else if (!isPressed)
         {

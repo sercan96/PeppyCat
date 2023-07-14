@@ -1329,6 +1329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 8460428853465976403}
+  movement: {fileID: 8460428853465976400}
 --- !u!114 &8460428853465976403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,7 +1343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8460428853465976398}
-  objectTag: Penguen
+  animalId: 0
 --- !u!114 &8460428853465976400
 MonoBehaviour:
   m_ObjectHideFlags: 0
