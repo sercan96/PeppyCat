@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RabbitCardData 1
   m_EditorClassIdentifier: 
   animalPrefab: {fileID: 1235272588495266775, guid: acf2eb2eb22852645849c695ebab5b67, type: 3}
-  groundMat: {fileID: 2100000, guid: 648a8630c958c0b49af39a9751448a70, type: 2}
+  groundMat: {fileID: 2100000, guid: 80163557887c0fd4ba8ac2bbaee52a17, type: 2}

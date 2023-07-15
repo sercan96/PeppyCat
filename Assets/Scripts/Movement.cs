@@ -223,9 +223,9 @@ public class Movement : MonoBehaviour
 
     public void ChangeSpeedValue(float speedValue)
     {
-        moveSpeed = speedValue;
-        defaultMoveSpeed = speedValue;
-        fastMoveSpeed = speedValue * 1.5f;
+        int amountOfIncrease = 2;
+        defaultMoveSpeed = moveSpeed += speedValue*0.5f;
+        fastMoveSpeed = moveSpeed * amountOfIncrease;
     }
     
 }

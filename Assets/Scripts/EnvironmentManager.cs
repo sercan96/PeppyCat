@@ -15,9 +15,9 @@ public class EnvironmentManager : MonoBehaviour
         Instance = this;
     }
 
-    public Material ChangeGroundMat(Material material)
+    public void ChangeGroundMat(Material material)
     {
-        return groundMesh.material = material;
+         groundMesh.material = material;
     }
     //public List<Material> groundMaterials;
     // private void OnEnable()

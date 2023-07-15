@@ -1519,9 +1519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5f45c41f260ea4d8911adda05ccf0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 6
-  moveSpeed: 6
-  fastMoveSpeed: 12
+  defaultMoveSpeed: 4
+  moveSpeed: 4
+  fastMoveSpeed: 8
   rotationSpeed: 10
   escapeTimer: 1.5
   minInterval: 1

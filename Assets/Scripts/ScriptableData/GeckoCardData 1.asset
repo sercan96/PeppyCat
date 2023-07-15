@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GeckoCardData 1
   m_EditorClassIdentifier: 
   animalPrefab: {fileID: 8817214770238189847, guid: bb965bb537c32474193f080c3c44f130, type: 3}
-  groundMat: {fileID: 2100000, guid: 63a7a44a03b04434b941e895fcb5ac68, type: 2}
+  groundMat: {fileID: 2100000, guid: 8f6f9b3ffeb5f8943842a4e2d73561fe, type: 2}

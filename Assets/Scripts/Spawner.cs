@@ -19,8 +19,6 @@ public class Spawner : MonoBehaviour
     private int animalCounter = 0;
     public static Spawner Instance;
 
-    // [SerializeField] private int spawnAnimalCount;
-
     private int defaultObjectNumber=1;
     
     public List<AnimalController> choosenAnimals = new List<AnimalController>();
@@ -143,7 +141,7 @@ public class Spawner : MonoBehaviour
     public void GetNewAnimalWithDelay(Transform target)
     {
         DieParticle(target);
-        Invoke(nameof(GetAnotherAnimal),1f);
+        GetAnotherAnimal();
     }
     private void DieParticle(Transform target)
     {
@@ -154,15 +152,6 @@ public class Spawner : MonoBehaviour
     {
         ChooseOneAnimal();
     }
-
-    // public void UpdateSpawnValue(float value)
-    // {
-    //     spawnAnimalCount = (int) value;
-    // }
-    //
-    // public void UpdateSpeedValue(float value)
-    // {
-    //     spawnAnimalCount = (int) value;
-    // }
+    
 
 }

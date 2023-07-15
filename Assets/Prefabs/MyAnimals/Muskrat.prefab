@@ -683,6 +683,7 @@ GameObject:
   - component: {fileID: 412782197606858168}
   - component: {fileID: 473717391713872606}
   - component: {fileID: 1788881618427712596}
+  - component: {fileID: 8901014404208408929}
   m_Layer: 0
   m_Name: Muskrat
   m_TagString: Animal
@@ -699,7 +700,7 @@ Transform:
   m_GameObject: {fileID: 4687909028946447332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.5, y: 0, z: 1.501}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 142826309324393723}
@@ -791,7 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMoveSpeed: 3
   moveSpeed: 3
-  fastMoveSpeed: 8
+  fastMoveSpeed: 7
   rotationSpeed: 10
   escapeTimer: 1.5
   minInterval: 1
@@ -829,6 +830,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 473717391713872606}
   movement: {fileID: 412782197606858168}
+--- !u!114 &8901014404208408929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687909028946447332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66a5074a75f41fcbec6ec7dff4a51fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escapeSound: {fileID: 8300000, guid: 42e05a4322415c84e9dedcf7371f465a, type: 3}
+  moveSounds:
+  - {fileID: 8300000, guid: d1f8ba4dbea63c943a17a0fee5d788a2, type: 3}
+  - {fileID: 8300000, guid: 5e80df4b6a4598f46b2976b0241fdbb1, type: 3}
+  - {fileID: 8300000, guid: 625fa63c228dc1e41a1a78a9e2219e2a, type: 3}
+  - {fileID: 8300000, guid: b3a499ad88e10fb4bb349b6aee2215dd, type: 3}
 --- !u!1 &7075999071711842021
 GameObject:
   m_ObjectHideFlags: 0

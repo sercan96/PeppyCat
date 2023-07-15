@@ -273,9 +273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5f45c41f260ea4d8911adda05ccf0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMoveSpeed: 4
-  moveSpeed: 4
-  fastMoveSpeed: 7
+  defaultMoveSpeed: 3
+  moveSpeed: 3
+  fastMoveSpeed: 6
   rotationSpeed: 5
   escapeTimer: 0.75
   minInterval: 1
@@ -578,6 +578,7 @@ GameObject:
   - component: {fileID: 6843018544256957572}
   - component: {fileID: 6843018544256957575}
   - component: {fileID: 6843018544256957574}
+  - component: {fileID: 7593344931659591753}
   m_Layer: 0
   m_Name: Toon - Bird
   m_TagString: Animal
@@ -637,6 +638,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7593344931659591753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843018544256957569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cc4f7459880c440a8c022343a8630d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalSound: {fileID: 8300000, guid: f2f8b623493d1ff468f9039c0ea67369, type: 3}
 --- !u!1 &6843018544258202097
 GameObject:
   m_ObjectHideFlags: 0

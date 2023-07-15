@@ -782,7 +782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMoveSpeed: 3
   moveSpeed: 3
-  fastMoveSpeed: 8
+  fastMoveSpeed: 7
   rotationSpeed: 10
   escapeTimer: 1
   minInterval: 1
