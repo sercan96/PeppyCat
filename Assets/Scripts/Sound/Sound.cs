@@ -20,7 +20,7 @@ public class Sound : MonoBehaviour
     public virtual void PlayAnimalSound()
     {}
     
-    public virtual void PlayEscapeSound()
+    public void PlayEscapeSound()
     {
         if (isPlayingEscapeSound)
             return;
@@ -35,12 +35,5 @@ public class Sound : MonoBehaviour
         isMoveSound = false;
 
     }
-
-    // protected virtual void Update()
-    // {
-    //     if (isPlayingEscapeSound && !audioSource.isPlaying)
-    //     {
-    //         isPlayingEscapeSound = false;
-    //     }
-    // }
+    
 }

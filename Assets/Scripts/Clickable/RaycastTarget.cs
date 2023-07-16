@@ -32,13 +32,11 @@ public class RaycastTarget : MonoBehaviour
                 {
                     AnimalController animalCont = hit.collider.GetComponentInParent<AnimalController>();
                     animalCont.CloseObject();
-                    Spawner.Instance.GetNewAnimalWithDelay(hit.transform);
-                    Spawner.Instance.RemoveFromList(animalCont);
+                    Spawner.Instance.RespawnAnimals(hit.transform,animalCont);
                     ScoreManager.Instance.AddScore(100);
                 }
                 else if (hit.collider.CompareTag("Far"))
                 {
-                    Debug.Log("Faraway");
                     hit.collider.GetComponentInParent<Movement>().EscapeFromClick();
                 }
             }
@@ -66,13 +64,13 @@ public class RaycastTarget : MonoBehaviour
                     {
                         if (hit.collider.CompareTag("Animal"))
                         {
-                            hit.collider.GetComponentInParent<AnimalController>().CloseObject();
-                            Spawner.Instance.GetNewAnimalWithDelay(hit.transform);
+                            AnimalController animalCont = hit.collider.GetComponentInParent<AnimalController>();
+                            animalCont.CloseObject();
+                            Spawner.Instance.RespawnAnimals(hit.transform,animalCont);
                             ScoreManager.Instance.AddScore(100);
                         }
                         else if (hit.collider.CompareTag("Far"))
                         {
-                            Debug.Log("Faraway");
                             hit.collider.GetComponentInParent<Movement>().EscapeFromClick();
                         }
                     }

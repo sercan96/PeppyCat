@@ -1525,7 +1525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4587172664236218572}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.23407, y: 0, z: 0}
+  m_LocalPosition: {x: -10, y: 0, z: 0.9336791}
   m_LocalScale: {x: 0.25000006, y: 0.25, z: 0.25000006}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1596,6 +1596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 4587172664236218571}
+  footPrintParticle: {fileID: 0}
   movement: {fileID: 4587172664236218569}
 --- !u!114 &4587172664236218571
 MonoBehaviour:
@@ -1610,7 +1611,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4587172664245610160}
-  animalId: 0
 --- !u!65 &4587172664236218568
 BoxCollider:
   m_ObjectHideFlags: 0

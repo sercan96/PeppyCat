@@ -1811,9 +1811,9 @@ Animation:
   m_GameObject: {fileID: 5531491281885325526}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b9d1dbd05566b214c9da316d68de3cc2, type: 2}
+  m_Animation: {fileID: 7400000, guid: 412f1ea8eb47d904f9dc25649f0756fa, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: b9d1dbd05566b214c9da316d68de3cc2, type: 2}
+  - {fileID: 7400000, guid: 412f1ea8eb47d904f9dc25649f0756fa, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -2220,7 +2220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5531491282672077334
 Transform:
   m_ObjectHideFlags: 0
@@ -2229,7 +2229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5531491282672077332}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.8212341, y: 0.5042472, z: 0.09815186}
+  m_LocalPosition: {x: -7.6837635, y: 0, z: 7}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2288,4 +2288,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorCont: {fileID: 0}
+  footPrintParticle: {fileID: 0}
   movement: {fileID: 5531491282672077333}

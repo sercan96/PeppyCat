@@ -699,10 +699,10 @@ RectTransform:
   m_Father: {fileID: 1679101382278218203}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.22647144}
+  m_AnchorMin: {x: 0, y: 0.16436993}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -0.0000019073486}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6056277915687563173
 MonoBehaviour:
@@ -1714,7 +1714,7 @@ RectTransform:
   m_Father: {fileID: 2719637865236242233}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.19582473}
+  m_AnchorMin: {x: 0, y: 0.1527837}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -2381,7 +2381,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.4
+  m_fontSize: 63.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2974,7 +2974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -5.253, y: 0}
+  m_AnchoredPosition: {x: -5.2529907, y: 0}
   m_SizeDelta: {x: 89.4939, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9173546139154144956
@@ -3585,10 +3585,10 @@ RectTransform:
   m_Father: {fileID: 4758957775743669678}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.94000006, y: 0.87000006}
-  m_AnchorMax: {x: 0.9906401, y: 0.9882212}
-  m_AnchoredPosition: {x: 1.1629639, y: -1.8375854}
-  m_SizeDelta: {x: -0.07590103, y: 1.9265003}
+  m_AnchorMin: {x: 0.924, y: 0.8353334}
+  m_AnchorMax: {x: 0.975, y: 0.95244247}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4446414116856278329
 CanvasRenderer:
@@ -3671,7 +3671,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6930652363650032910}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4188159229130406979}
+        m_TargetAssemblyTypeName: PlayMenuUI, Assembly-CSharp
+        m_MethodName: ExitButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7670510716774623440
 GameObject:
   m_ObjectHideFlags: 0

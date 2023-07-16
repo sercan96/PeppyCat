@@ -50,4 +50,9 @@ public class PlayMenuUI : MonoBehaviour
         
         lastSelectedItem.ticImage.gameObject.SetActive(state);
     }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
 }

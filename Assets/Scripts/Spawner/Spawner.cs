@@ -1,11 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using JSLizards.Iguana.Scripts;
 using Managers;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 
@@ -15,7 +12,7 @@ public class Spawner : MonoBehaviour
     public List<AnimalController> animalList;
     public ParticleSystem dieParticle;
 
-    public bool isFirstSpawn = true;
+    public bool isFirstSpawn;
     private int animalCounter = 0;
     public static Spawner Instance;
 
@@ -48,19 +45,32 @@ public class Spawner : MonoBehaviour
 
     private void SpawnAllObjects()
     {
-        if(isFirstSpawn)
+        if (isFirstSpawn)
             return;
-        
-        foreach (var animal in spawnAnimals)
+
+        for (int i = 0; i < spawnAnimals.Count; i++)
         {
+            AnimalController animal = spawnAnimals[i];
             AnimalController spawnedObject = Instantiate(animal, transform);
             spawnedObject.movement.ChangeSpeedValue(speedValue);
-            spawnedObject.name = "Object" + spawnedObject.GetInstanceID(); 
+            spawnedObject.name = "Object" + spawnedObject.GetInstanceID();
             animalList.Add(spawnedObject);
+            
+            string layerName = "SpawnedObject" + i; 
+            int layerIndex = SortingLayer.GetLayerValueFromName(layerName);
+            SetObjectLayer(spawnedObject.gameObject, layerIndex);
+
             animal.gameObject.SetActive(false);
         }
     }
-    
+    private void SetObjectLayer(GameObject obj, int layerIndex)
+    {
+        Renderer[] renderers = obj.GetComponentsInChildren<Renderer>(true);
+        foreach (Renderer renderer in renderers)
+        {
+            renderer.gameObject.layer = layerIndex;
+        }
+    }
     private void ChooseOneAnimal()
     {
         switch (GameManager.Instance.gameState)
@@ -100,6 +110,7 @@ public class Spawner : MonoBehaviour
         isFirstSpawn = true;
     }
     
+    
 
     private void GetRandomChoose()
     {
@@ -117,8 +128,13 @@ public class Spawner : MonoBehaviour
 
     private AnimalController GetRandomAvailableAnimal()
     {
+        // Seçilmemiş hayvanların bir listesini oluşturun
         List<AnimalController> remainingAnimals = animalList.Except(choosenAnimals).ToList();
+    
+        // 0 ile remainingAnimals.Count arasında rastgele bir indeks seçin
         int randomIndex = Random.Range(0, remainingAnimals.Count);
+    
+        // Seçilen rastgele hayvanı döndürün
         return remainingAnimals[randomIndex];
     }
 
@@ -138,10 +154,11 @@ public class Spawner : MonoBehaviour
     }
 
    
-    public void GetNewAnimalWithDelay(Transform target)
+    public void RespawnAnimals(Transform target,AnimalController animal)
     {
         DieParticle(target);
         GetAnotherAnimal();
+        RemoveFromList(animal);
     }
     private void DieParticle(Transform target)
     {

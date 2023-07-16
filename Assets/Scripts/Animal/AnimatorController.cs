@@ -8,8 +8,6 @@ using UnityEngine;
 public class AnimatorController : MonoBehaviour
 {
    [SerializeField] private Animator animator;
-   //[SerializeField] private  string objectTag;
-   public int animalId;
    private string idleAnım = "Idle";
    private string walkAnim = "Walk";
    private string runAnim = "Run";
@@ -24,8 +22,7 @@ public class AnimatorController : MonoBehaviour
       EventManager.OnTargetMove += WalkAnim;
       EventManager.OnTargetRun += RunAnim;
 
-      AssignID();
-
+      SetObjectTag();
    }
    
    private void OnDisable()
@@ -39,28 +36,23 @@ public class AnimatorController : MonoBehaviour
    {
       return gameObject.name;
    }
+   
 
-   private void AssignID()
+   private void IdleAnim(string targetTag)
    {
-      animalId++;
-      SetObjectTag();
-   }
-
-   private void IdleAnim(string tag)
-   {
-      if (tag == null || tag != SetObjectTag()) return;
+      if (targetTag == null || targetTag != SetObjectTag()) return;
       animator.SetTrigger(idleAnım);
    }
 
-   private void WalkAnim(string tag)
+   private void WalkAnim(string targetTag)
    {
-      if (tag == null || tag != SetObjectTag()) return;
+      if (targetTag == null || targetTag != SetObjectTag()) return;
       animator.SetTrigger(walkAnim);
    }
 
-   private void RunAnim(string tag)
+   private void RunAnim(string targetTag)
    {
-      if (tag == null || tag != SetObjectTag()) return;
+      if (targetTag == null || targetTag != SetObjectTag()) return;
       animator.SetTrigger(runAnim);
 
    }

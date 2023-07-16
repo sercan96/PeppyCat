@@ -87,7 +87,7 @@ public class Movement : MonoBehaviour
         else
         {
             isMoving = false;
-            //EventManager.InvokeOnTargetStop(animatorCont.SetObjectTag());
+            
             EventManager.InvokeOnTargetStop(animatorCont != null ? animatorCont.SetObjectTag() : null);
         }
         
@@ -103,7 +103,7 @@ public class Movement : MonoBehaviour
         HandleIdleIntervalEnd();
 
         isMoving = true;
-        // EventManager.InvokeOnTargetMove(animatorCont.SetObjectTag());
+    
         EventManager.InvokeOnTargetMove(animatorCont != null ? animatorCont.SetObjectTag() : null);
         moveSpeed = defaultMoveSpeed;
        
@@ -186,16 +186,30 @@ public class Movement : MonoBehaviour
     
     IEnumerator Escape(float waitTime)
     {
-        EventManager.InvokeOnTargetRun(animatorCont.SetObjectTag());
+        if (animatorCont != null)
+        {
+            EventManager.InvokeOnTargetRun(animatorCont.SetObjectTag());
+        }
+        else
+        {
+            Debug.LogError("Animator controller is not assigned.");
+        }
 
         yield return new WaitForSeconds(waitTime);
-        
-        EventManager.InvokeOnTargetMove(animatorCont.SetObjectTag());
+
+        if (animatorCont != null)
+        {
+            EventManager.InvokeOnTargetMove(animatorCont.SetObjectTag());
+        }
+        else
+        {
+            Debug.LogError("Animator controller is not assigned.");
+        }
     }
 
     private void OnTargetRun(string tag)
     {
-        if (animatorCont.SetObjectTag() != tag)
+        if (gameObject.name != tag)
             return;
         
         currentInterval = 2f;
