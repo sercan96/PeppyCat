@@ -73,6 +73,8 @@ public class Spawner : MonoBehaviour
     }
     private void ChooseOneAnimal()
     {
+        NoAnimalSelected();
+        
         switch (GameManager.Instance.gameState)
         {
             case GameManager.GameState.PlayMixed:
@@ -83,6 +85,16 @@ public class Spawner : MonoBehaviour
                 GetChosenAnimal(selectedAnimal);
                 break;
         }
+       
+    }
+
+    private void NoAnimalSelected()
+    {
+        if (selectedAnimal != null)
+            return;
+        
+        int rnd = Random.Range(0, spawnAnimals.Count);
+        selectedAnimal = spawnAnimals[rnd];
     }
     
     public void CatchClickAnimal(AnimalController animalController)

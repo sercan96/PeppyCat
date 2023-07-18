@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3689713401730236271}
   - component: {fileID: 4129186980962260896}
   - component: {fileID: 8817214770238189847}
+  - component: {fileID: 8816176624104585352}
   m_Layer: 0
   m_Name: Gecko_LOD0
   m_TagString: Animal
@@ -127,6 +128,20 @@ MonoBehaviour:
   animatorCont: {fileID: 3689713401730236271}
   footPrintParticle: {fileID: 4388212784602431722}
   movement: {fileID: 7389505530836200101}
+--- !u!114 &8816176624104585352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043352946496549175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cc4f7459880c440a8c022343a8630d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escapeSound: {fileID: 8300000, guid: a8771409c2f868e4f8eb0e62147416f9, type: 3}
+  moveSound: {fileID: 8300000, guid: a8771409c2f868e4f8eb0e62147416f9, type: 3}
 --- !u!1 &1326047477144486083
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +334,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 71824330e53acb448a9f9c1f4cfc7aee, type: 2}
+  - {fileID: 2100000, guid: 16eee496e8edc5a41b6b9cc9f93042a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -565,7 +580,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9164315, g: 1, b: 0.013207495, a: 1}
-  m_Intensity: 4
+  m_Intensity: 8
   m_Range: 4
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

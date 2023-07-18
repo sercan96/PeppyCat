@@ -8,7 +8,7 @@ using UnityEngine;
 public class AnimatorController : MonoBehaviour
 {
    [SerializeField] private Animator animator;
-   private string idleAnım = "Idle";
+   private string idleAnim = "Idle";
    private string walkAnim = "Walk";
    private string runAnim = "Run";
    private int runAnimSpeedValue = 4;
@@ -41,7 +41,7 @@ public class AnimatorController : MonoBehaviour
    private void IdleAnim(string targetTag)
    {
       if (targetTag == null || targetTag != SetObjectTag()) return;
-      animator.SetTrigger(idleAnım);
+      animator.SetTrigger(idleAnim);
    }
 
    private void WalkAnim(string targetTag)

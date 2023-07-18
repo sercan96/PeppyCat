@@ -15,7 +15,7 @@ public class ScreenSizeCalculator : MonoBehaviour
         float size = Mathf.Min(cellWidth, cellHeight);
         gridLayout.cellSize = new Vector2(size, size);
         
-        float newRightValue = Screen.height *0.7f;
+        float newRightValue = Screen.height *0.9f;
         Vector2 offsetMax = rectTransform.offsetMax;
         offsetMax.x = newRightValue;
         rectTransform.offsetMax = offsetMax;

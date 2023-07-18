@@ -9,15 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 674865522282926689, guid: 9bd2076c4870d334e9ac6f2b74636e2b, type: 3}
       propertyPath: m_Color.b
-      value: 0.44891423
+      value: 0.5647059
       objectReference: {fileID: 0}
     - target: {fileID: 674865522282926689, guid: 9bd2076c4870d334e9ac6f2b74636e2b, type: 3}
       propertyPath: m_Color.g
-      value: 0.9811321
+      value: 0.2915155
       objectReference: {fileID: 0}
     - target: {fileID: 674865522282926689, guid: 9bd2076c4870d334e9ac6f2b74636e2b, type: 3}
       propertyPath: m_Color.r
-      value: 0.4668369
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2128321371011614313, guid: 9bd2076c4870d334e9ac6f2b74636e2b, type: 3}
       propertyPath: m_Pivot.x
@@ -106,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 3521928797029369268, guid: 9bd2076c4870d334e9ac6f2b74636e2b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9a07fa2ef827d31479c1a5817ce14239, type: 3}
+      objectReference: {fileID: 21300000, guid: d9b832105e991ac449cb0c35c0879e5f, type: 3}
     - target: {fileID: 6654102749183158869, guid: 9bd2076c4870d334e9ac6f2b74636e2b, type: 3}
       propertyPath: animalCardData
       value: 

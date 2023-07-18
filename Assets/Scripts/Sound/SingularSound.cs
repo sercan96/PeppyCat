@@ -40,4 +40,9 @@ public class SingularSound : Sound
         audioSource.Stop();
         isMoveSound = false;
     }
+
+    public void ReplaySound()
+    {
+          isMoveSound = false;
+    }
 }

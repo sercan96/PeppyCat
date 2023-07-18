@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ButterflyCardData 2
   m_EditorClassIdentifier: 
   animalPrefab: {fileID: 8941812071411825797, guid: 44c31d8906beed5469027176d5f18625, type: 3}
-  groundMat: {fileID: 2100000, guid: 157c47e0c183e304d98ecf181ace8326, type: 2}
+  groundMat: {fileID: 2100000, guid: 066715bbf9824fa4099e45ef4dd75836, type: 2}

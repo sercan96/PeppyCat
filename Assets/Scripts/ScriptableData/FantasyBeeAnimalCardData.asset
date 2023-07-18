@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FantasyBeeAnimalCardData
   m_EditorClassIdentifier: 
   animalPrefab: {fileID: 8629452956570087028, guid: 75fa72e27f4ecff4ba8896061d6fb06e, type: 3}
-  groundMat: {fileID: 2100000, guid: 1d5939a464acf6647805c9f9dbfaa20b, type: 2}
+  groundMat: {fileID: 2100000, guid: ad34f47c4966ee647bce96892c9d4e5c, type: 2}

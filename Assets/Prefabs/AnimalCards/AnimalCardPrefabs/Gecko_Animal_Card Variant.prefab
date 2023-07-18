@@ -106,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 3388765980778119329, guid: 74b20042c19f8e94e817cca01c57e4a3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6d7c4baf437f58c4485a6ebfd79f31c6, type: 3}
+      objectReference: {fileID: 21300000, guid: 78c366329ad45f14c993af004386097e, type: 3}
     - target: {fileID: 4881664582089830208, guid: 74b20042c19f8e94e817cca01c57e4a3, type: 3}
       propertyPath: animalCardData
       value: 

@@ -43,9 +43,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.78959846, g: 0.8207547, b: 0.16647384, a: 1}
-  m_Intensity: 3.5
-  m_Range: 3.5
+  m_Color: {r: 0.95209575, g: 1, b: 0, a: 1}
+  m_Intensity: 5
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1510,6 +1510,7 @@ GameObject:
   - component: {fileID: 4587172664236218570}
   - component: {fileID: 4587172664236218571}
   - component: {fileID: 4587172664236218568}
+  - component: {fileID: 8572328171334595083}
   m_Layer: 0
   m_Name: LOVEDUCK
   m_TagString: Animal
@@ -1526,7 +1527,7 @@ Transform:
   m_GameObject: {fileID: 4587172664236218572}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -10, y: 0, z: 0.9336791}
-  m_LocalScale: {x: 0.25000006, y: 0.25, z: 0.25000006}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4587172664235985938}
@@ -1624,6 +1625,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.20877, y: 8.663377, z: 9.927783}
   m_Center: {x: 0.26963133, y: 3.8316884, z: 1.108484}
+--- !u!114 &8572328171334595083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4587172664236218572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cc4f7459880c440a8c022343a8630d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escapeSound: {fileID: 8300000, guid: fefb51cfc7257fc4b9203c7c99e03bfe, type: 3}
+  moveSound: {fileID: 8300000, guid: fefb51cfc7257fc4b9203c7c99e03bfe, type: 3}
 --- !u!1 &4588350301704930526
 GameObject:
   m_ObjectHideFlags: 0

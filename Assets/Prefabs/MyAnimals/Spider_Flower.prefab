@@ -708,6 +708,7 @@ GameObject:
   - component: {fileID: 5023368402955011523}
   - component: {fileID: 1733566105448463879}
   - component: {fileID: 6294762698391852309}
+  - component: {fileID: 1920097396501215871}
   m_Layer: 0
   m_Name: Spider_Flower
   m_TagString: Animal
@@ -724,7 +725,7 @@ Transform:
   m_GameObject: {fileID: 4193307388014706069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -2.1}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3880478386304539282}
@@ -821,6 +822,20 @@ MonoBehaviour:
   animatorCont: {fileID: 1733566105448463879}
   footPrintParticle: {fileID: 6948286643198843587}
   movement: {fileID: 5023368402955011523}
+--- !u!114 &1920097396501215871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193307388014706069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cc4f7459880c440a8c022343a8630d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escapeSound: {fileID: 8300000, guid: 6f48b1d7676ec204c9670523158122b5, type: 3}
+  moveSound: {fileID: 8300000, guid: b69bade2e0eca3c48b0031264d54d1d6, type: 3}
 --- !u!1 &4193357601723702185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4194418527746284303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1181,8 +1196,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
+  m_Color: {r: 1, g: 0.95496166, b: 0, a: 1}
+  m_Intensity: 15
   m_Range: 4
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

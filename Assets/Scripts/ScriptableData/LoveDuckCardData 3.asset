@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LoveDuckCardData 3
   m_EditorClassIdentifier: 
   animalPrefab: {fileID: 4587172664236218570, guid: 9802746795a97b940ab6077998c7f856, type: 3}
-  groundMat: {fileID: 2100000, guid: fed5da7d598112846b2ef6bd2ab38a03, type: 2}
+  groundMat: {fileID: 2100000, guid: e98f7032f5078884f804a99f39beb57b, type: 2}
