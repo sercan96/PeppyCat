@@ -9,6 +9,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance;
     public int score;
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    [SerializeField]private Interstitial interstitial;
     
     private static string pointKey = "Point";
 
@@ -55,6 +57,12 @@ public class ScoreManager : MonoBehaviour
         score += points;
         UpdateScoreText();
         SetPoint(score);
+
+        if(score%2000==0)
+        {
+            Debug.Log("girdi");
+            interstitial.ShowAd();
+        }
     }
 
     private void UpdateScoreText()
