@@ -9,8 +9,11 @@ public class Rewarded : MonoBehaviour
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize((InitializationStatus initStatus) =>
         {
-            LoadRewardedAd();
-            ShowRewardedAd();
+            if(PlayerPrefs.GetInt("Noads") == 0)
+            {
+                LoadRewardedAd();
+                ShowRewardedAd();
+            }
         });
     }
     // These ad units are configured to always serve test ads.

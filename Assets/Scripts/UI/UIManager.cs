@@ -8,10 +8,9 @@ public class UIManager : MonoBehaviour
     public GameObject gameUI;
     public SceneFader sceneFader;
     public static UIManager Instance;
+    public GameObject noAds;
 
    
-
-    
     private void OnEnable()
     {
         EventManager.OnGameStart += MenuUICanvasDeactivate;
@@ -24,6 +23,19 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    void Start()
+    {
+       CheckAdsSaveSystem();
+    }
+
+    private void CheckAdsSaveSystem()
+    {
+        if(PlayerPrefs.GetInt("Noads") == 1)
+        {
+            NoAdsRemove();
+        }
     }
 
 
@@ -61,6 +73,11 @@ public class UIManager : MonoBehaviour
     {
         SetUIActive(playMenuUI.gameObject, true);
         SetUIActive(gameUI, false);
+    }
+
+    public void NoAdsRemove()
+    {
+        noAds.SetActive(false);
     }
 
 

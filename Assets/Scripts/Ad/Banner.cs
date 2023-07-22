@@ -19,9 +19,16 @@ public class Banner : MonoBehaviour
     {
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize((InitializationStatus initStatus) =>
+        {});
+        
+        if(PlayerPrefs.HasKey("Noads") == false)
+        {
+            PlayerPrefs.SetInt("Noads",0);
+        }
+        if(PlayerPrefs.GetInt("Noads") == 0)
         {
             CreateBannerView();
-        });
+        }
     }
     public void CreateBannerView()
     {

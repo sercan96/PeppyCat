@@ -18,10 +18,17 @@ public class Interstitial : MonoBehaviour
     {    
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize((InitializationStatus initStatus) =>
+        { });
+        
+        if(PlayerPrefs.HasKey("Noads") == false)
+        {
+            PlayerPrefs.SetInt("Noads",0);
+        }
+
+        if(PlayerPrefs.GetInt("Noads") == 0)
         {
             LoadInterstitialAd();
-            // ShowAd();
-        });
+        }
     }
 
 
@@ -51,8 +58,8 @@ public class Interstitial : MonoBehaviour
                     return;
                 }
 
-                Debug.Log("Interstitial ad loaded with response : "
-                            + ad.GetResponseInfo());
+                // Debug.Log("Interstitial ad loaded with response : "
+                //             + ad.GetResponseInfo());
 
                 interstitialAd = ad;
             });
@@ -61,7 +68,7 @@ public class Interstitial : MonoBehaviour
     {
         if (interstitialAd != null && interstitialAd.CanShowAd())
         {
-            Debug.Log("Showing interstitial ad.");
+            // Debug.Log("Showing interstitial ad.");
             interstitialAd.Show();
         }
         else
@@ -86,28 +93,27 @@ public class Interstitial : MonoBehaviour
         // Raised when an impression is recorded for an ad.
         ad.OnAdImpressionRecorded += () =>
         {
-            Debug.Log("Interstitial ad recorded an impression.");
+            //Debug.Log("Interstitial ad recorded an impression.");
         };
         // Raised when a click is recorded for an ad.
         ad.OnAdClicked += () =>
         {
-            Debug.Log("Interstitial ad was clicked.");
+            //Debug.Log("Interstitial ad was clicked.");
         };
         // Raised when an ad opened full screen content.
         ad.OnAdFullScreenContentOpened += () =>
         {
-            Debug.Log("Interstitial ad full screen content opened.");
+            //Debug.Log("Interstitial ad full screen content opened.");
         };
         // Raised when the ad closed full screen content.
         ad.OnAdFullScreenContentClosed += () =>
         {
-            Debug.Log("Interstitial ad full screen content closed.");
+            //Debug.Log("Interstitial ad full screen content closed.");
         };
         // Raised when the ad failed to open full screen content.
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
-            Debug.LogError("Interstitial ad failed to open full screen content " +
-                        "with error : " + error);
+            //.LogError("Interstitial ad failed to open full screen content " + "with error : " + error);
         };
     }
     private void RegisterReloadHandler(InterstitialAd ad)
@@ -115,7 +121,7 @@ public class Interstitial : MonoBehaviour
         // Raised when the ad closed full screen content.
         ad.OnAdFullScreenContentClosed += () =>
         {
-            Debug.Log("Interstitial Ad full screen content closed.");
+            //Debug.Log("Interstitial Ad full screen content closed.");
 
             // Reload the ad so that we can show another as soon as possible.
             LoadInterstitialAd();
@@ -129,6 +135,12 @@ public class Interstitial : MonoBehaviour
             // Reload the ad so that we can show another as soon as possible.
             LoadInterstitialAd();
         };
+    }
+    private void OnDestroy() {
+        if(this != null)
+        {
+            Destroy(this);
+        }
     }
 
 

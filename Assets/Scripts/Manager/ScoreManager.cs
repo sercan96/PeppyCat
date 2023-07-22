@@ -58,11 +58,11 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreText();
         SetPoint(score);
 
-        if(score%2000==0)
+        if(score%2000==0  &&  PlayerPrefs.GetInt("Noads") == 0)
         {
-            Debug.Log("girdi");
             interstitial.ShowAd();
         }
+
     }
 
     private void UpdateScoreText()
