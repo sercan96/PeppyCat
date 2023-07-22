@@ -8,17 +8,21 @@ public class Rewarded : MonoBehaviour
     {
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize((InitializationStatus initStatus) =>
+        { });
+
+        if(PlayerPrefs.HasKey("Noads") == false)
         {
-            if(PlayerPrefs.GetInt("Noads") == 0)
-            {
-                LoadRewardedAd();
-                ShowRewardedAd();
-            }
-        });
+            PlayerPrefs.SetInt("Noads",0);
+        }
+
+        if(PlayerPrefs.GetInt("Noads") == 0)
+        {
+            LoadRewardedAd();
+        }
     }
     // These ad units are configured to always serve test ads.
     #if UNITY_ANDROID
-    private string _adUnitId = "ca-app-pub-3940256099942544/5224354917";
+    private string _adUnitId = "ca-app-pub-4617021103606382~2250535806";
     #elif UNITY_IPHONE
     private string _adUnitId = "ca-app-pub-3940256099942544/1712485313";
     #else
@@ -52,13 +56,11 @@ public class Rewarded : MonoBehaviour
                 // if error is not null, the load request failed.
                 if (error != null || ad == null)
                 {
-                    Debug.LogError("Rewarded ad failed to load an ad " +
-                                    "with error : " + error);
+                    //Debug.LogError("Rewarded ad failed to load an ad " +   "with error : " + error);
                     return;
                 }
 
-                Debug.Log("Rewarded ad loaded with response : "
-                            + ad.GetResponseInfo());
+                //Debug.Log("Rewarded ad loaded with response : "+ ad.GetResponseInfo());
 
                 rewardedAd = ad;
             });

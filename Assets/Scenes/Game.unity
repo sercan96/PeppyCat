@@ -372,7 +372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &734644656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +432,7 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 260618736}
   interstitial: {fileID: 297791012}
+  rewardedAd: {fileID: 734644656}
 --- !u!4 &957943492
 Transform:
   m_ObjectHideFlags: 0

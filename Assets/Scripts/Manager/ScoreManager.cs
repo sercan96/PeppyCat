@@ -11,6 +11,8 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
 
     [SerializeField]private Interstitial interstitial;
+    [SerializeField]private Rewarded rewardedAd;
+
     
     private static string pointKey = "Point";
 
@@ -60,7 +62,11 @@ public class ScoreManager : MonoBehaviour
 
         if(score%2000==0  &&  PlayerPrefs.GetInt("Noads") == 0)
         {
-            interstitial.ShowAd();
+            int random = Random.Range(0,2);
+            if(random ==0)
+                interstitial.ShowAd();
+            else
+                rewardedAd.ShowRewardedAd();
         }
 
     }

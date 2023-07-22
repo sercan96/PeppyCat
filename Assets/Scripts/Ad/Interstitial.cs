@@ -7,7 +7,7 @@ public class Interstitial : MonoBehaviour
     private InterstitialAd interstitialAd;
 
 #if UNITY_ANDROID
-  private string _adUnitId = "ca-app-pub-7215521156876895~9615335522";
+  private string _adUnitId = "ca-app-pub-4617021103606382/8039717406";
 #elif UNITY_IPHONE
   private string _adUnitId = "ca-app-pub-3940256099942544/4411468910";
 #else
